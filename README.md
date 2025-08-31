@@ -56,14 +56,16 @@ MindCare_AI/
 |   |   └── 📄deployement.py             
 ├── 📁 tests/                       ←
 │   ├── 📄 test_bot_logic.py        
-│   └── 📄 __init__.py              
-├── 📄 .env.example                 
+│   └── 📄 __init__.py
+├── 📁 root/                      
+|    ├── 📄 .env.example
+|    └── 📄 requirements.txt
+|    └── 📄 SECURITY.md          
 ├── 📄 .gitignore                   
 ├── 📄 LICENSE                      
 ├── 📄 package.json                 
 ├── 📄 README.md                    
-├── 📄 requirements.txt             
-└── 📄 SECURITY.md                  
+                  
 
 ```
 
