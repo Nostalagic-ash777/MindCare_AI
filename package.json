@@ -1,29 +1,39 @@
-{
-  "name": "mindcare-ai",
-  "version": "1.0.0",
-  "description": "Mental Health Assistant chatbot built with Botpress",
-  "main": "index.html",
-  "scripts": {
-    "start": "python -m http.server 8000",
-    "dev": "python -m http.server 8000",
-    "deploy": "gh-pages -d ."
-  },
-  "keywords": [
-    "mental-health",
-    "chatbot",
-    "botpress",
-    "ai",
-    "wellness",
-    "healthcare"
-  ],
-  "author": "MindCare AI Team",
-  "license": "MIT",
-  "devDependencies": {
-    "gh-pages": "^3.2.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/yourusername/mindcare-ai.git"
-  },
-  "homepage": "https://yourusername.github.io/mindcare-ai"
-}
+import os
+import json
+
+# Create the complete professional project structure
+def create_project_structure():
+    # Main project directory
+    project_name = "mindcare-ai"
+    
+    # Create all directories
+    directories = [
+        f"{project_name}",
+        f"{project_name}/src",
+        f"{project_name}/src/components",
+        f"{project_name}/src/utils",
+        f"{project_name}/src/services",
+        f"{project_name}/public",
+        f"{project_name}/public/css",
+        f"{project_name}/public/js",
+        f"{project_name}/public/assets",
+        f"{project_name}/public/assets/images",
+        f"{project_name}/config",
+        f"{project_name}/docs",
+        f"{project_name}/tests",
+        f"{project_name}/scripts",
+        f"{project_name}/.github",
+        f"{project_name}/.github/workflows"
+    ]
+    
+    for directory in directories:
+        os.makedirs(directory, exist_ok=True)
+    
+    print("📁 Professional project structure created!")
+    print("Directory structure:")
+    for directory in directories:
+        print(f"   {directory}/")
+    
+    return project_name
+
+project_name = create_project_structure()
