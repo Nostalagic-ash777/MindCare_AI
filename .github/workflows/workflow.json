@@ -1,0 +1,75 @@
+{
+  "workflow": {
+    "id": "MindCareAI_Workflow_001",
+    "name": "MindCare AI Conversational Flow",
+    "description": "Core conversation flow with crisis detection and custom event handling",
+    "nodes": [
+      {
+        "id": "Start",
+        "type": "Start",
+        "next": ["DetectCrisis1"]
+      },
+      {
+        "id": "DetectCrisis1",
+        "type": "Standard",
+        "label": "Detects Crisis Keywords and Level",
+        "implementation": "src/services/MentalHealthService.analyzeRiskLevel",
+        "next": ["AutonomousNode"]
+      },
+      {
+        "id": "AutonomousNode",
+        "type": "Autonomous",
+        "label": "MindCare Companion AI",
+        "instructions": [
+          "You are MindCare’s compassionate, knowledgeable, and ethically-guided AI mental health support assistant.",
+          "Use crisis detection, resource lookup, and empathetic conversation."
+        ],
+        "actions": [
+          "searchKnowledge",
+          "generateContent",
+          "browsePages",
+          "sendCustomEvent",
+          "extractContentFromImage"
+        ],
+        "next": ["ChatSendCustomEvent1"]
+      },
+      {
+        "id": "ChatSendCustomEvent1",
+        "type": "ChatSendCustomEvent",
+        "label": "(Chat) Send Custom Event",
+        "eventName": "MindCare.Response",
+        "payload": {
+          "riskLevel": "${DetectCrisis1.result.level}",
+          "message": "${AutonomousNode.generatedResponse}"
+        },
+        "next": ["End"]
+      },
+      {
+        "id": "ExceptionHandler1",
+        "type": "ExceptionHandler",
+        "label": "On exception",
+        "handlerBehavior": "Log error & send fallback message",
+        "next": ["End1"]
+      },
+      {
+        "id": "End",
+        "type": "End",
+        "label": "Successful Completion"
+      },
+      {
+        "id": "End1",
+        "type": "End",
+        "label": "Exception Completion"
+      }
+    ],
+    "connections": [
+      { "from": "Start",              "to": "DetectCrisis1" },
+      { "from": "DetectCrisis1",      "to": "AutonomousNode" },
+      { "from": "AutonomousNode",     "to": "ChatSendCustomEvent1" },
+      { "from": "ChatSendCustomEvent1","to": "End" },
+      { "from": "AutonomousNode",     "onException": "ExceptionHandler1" },
+      { "from": "DetectCrisis1",      "onException": "ExceptionHandler1" },
+      { "from": "ExceptionHandler1",  "to": "End1" }
+    ]
+  }
+}
