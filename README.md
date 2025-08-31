@@ -50,7 +50,10 @@ MindCare_AI/
 |   |   |── 📄 analyitics.py               
 │   ├── 📁 utils/
 |   |   |── 📄config_manager.py                   
-│   └── 📁 scripts/                 
+│   └── 📁 scripts/
+|   |   |── 📄botlogic.py
+|   |   └── 📄data_proccesor.py
+|   |   └── 📄deployement.py             
 ├── 📁 tests/                       ←
 │   ├── 📄 test_bot_logic.py        
 │   └── 📄 __init__.py              
