@@ -25,10 +25,10 @@ MindCare AI is an intelligent mental health assistant built with Botpress. It pr
 ```
 MindCare_AI/
 ├── 📁 .github/
-|  └── 📄test_github.py
+|   |── 📄test_github.py
 │   └── 📁 workflows/
-│       └── 📄 deploy.yml
-        └── 📄 workflow.json          
+│       |── 📄 deploy.yml
+|       └── 📄 workflow.json          
 ├── 📁 config/
 │   └── 📄 config.json              
 ├── 📁 docs/                        
@@ -40,14 +40,14 @@ MindCare_AI/
 │   ├── 📄 styles.css               
 │   ├── 📄 script.js                
 │   └── 📁 demo/
-         └── 📄 chatgpt com .html
-         └── 📄 www google com .html
-         └── 📄 www wikipedia org .html
+|       |── 📄 chatgpt com .html
+|       └── 📄 www google com .html
+|       └── 📄 www wikipedia org .html
 ├── 📁 src/
-│   ├── 📁 components/              
-│   │   ├── 📄 ChatWidget.js        
-│   │   └── 📄 __init__.py          
-│   ├── 📁 services/                
+│   ├── 📁 components/                      
+│   │   |── 📄 __init__.py          
+│   ├── 📁 services/
+|   |   |── 📄 analyitics.py               
 │   ├── 📁 utils/                   
 │   └── 📁 scripts/                 
 ├── 📁 tests/                       ←
