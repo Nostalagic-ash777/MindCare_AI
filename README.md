@@ -40,7 +40,9 @@ MindCare_AI/
 │   ├── 📄 styles.css               
 │   ├── 📄 script.js                
 │   └── 📁 demo/
-         └──   
+         └── 📄 chatgpt com .html
+         └── 📄 www google com .html
+         └── 📄 www wikipedia org .html
 ├── 📁 src/
 │   ├── 📁 components/              
 │   │   ├── 📄 ChatWidget.js        
