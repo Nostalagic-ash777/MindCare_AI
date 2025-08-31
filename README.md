@@ -23,12 +23,39 @@ MindCare AI is an intelligent mental health assistant built with Botpress. It pr
 ## 📁 Project Structure
 
 ```
-mindcare-ai/
-├── index.html          # Main webpage
-├── styles.css          # Styling and theme
-├── script.js           # JavaScript functionality
-├── config.json         # Botpress configuration
-└── README.md          # This file
+MindCare_AI/
+├── 📁 .github/
+│   └── 📁 workflows/
+│       └── 📄 deploy.yml           
+├── 📁 config/
+│   └── 📄 config.json              
+├── 📁 docs/                        
+│   ├── 📄 CONTRIBUTING.md          
+│   ├── 📄 API.md                   
+│   └── 📄 DEPLOYMENT.md              
+├── 📁 public/
+│   ├── 📄 index.html               
+│   ├── 📄 styles.css               
+│   ├── 📄 script.js                
+│   └── 📁 demo/                    
+├── 📁 src/
+│   ├── 📁 components/              
+│   │   ├── 📄 ChatWidget.js        
+│   │   └── 📄 __init__.py          
+│   ├── 📁 services/                
+│   ├── 📁 utils/                   
+│   └── 📁 scripts/                 
+├── 📁 tests/                       ←
+│   ├── 📄 test_bot_logic.py        
+│   └── 📄 __init__.py              
+├── 📄 .env.example                 
+├── 📄 .gitignore                   
+├── 📄 LICENSE                      
+├── 📄 package.json                 
+├── 📄 README.md                    
+├── 📄 requirements.txt             
+└── 📄 SECURITY.md                  
+
 ```
 
 ## 🎯 Quick Start
