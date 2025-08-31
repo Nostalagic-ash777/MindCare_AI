@@ -48,7 +48,8 @@ MindCare_AI/
 │   │   |── 📄 __init__.py          
 │   ├── 📁 services/
 |   |   |── 📄 analyitics.py               
-│   ├── 📁 utils/                   
+│   ├── 📁 utils/
+|   |   |── 📄config_manager.py                   
 │   └── 📁 scripts/                 
 ├── 📁 tests/                       ←
 │   ├── 📄 test_bot_logic.py        
