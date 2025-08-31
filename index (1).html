@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindCare AI - Mental Health Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MindCare AI</h1>
+            <p>Your Personal Mental Health Assistant</p>
+        </header>
+        
+        <main>
+            <div class="chat-container">
+                <div id="webchat"></div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 MindCare AI. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Botpress Webchat Scripts -->
+    <script src="https://cdn.botpress.cloud/webchat/v3.2/inject.js"></script>
+    <script>
+        window.botpressWebChat.init({
+            "composerPlaceholder": "Type a message...",
+            "botConversationDescription": "This chatbot was built surprisingly fast with Botpress",
+            "botId": "mindcare-ai-bot",
+            "hostUrl": "https://cdn.botpress.cloud/webchat/v3.2",
+            "messagingUrl": "https://messaging.botpress.cloud",
+            "clientId": "mindcare-client-id",
+            "webhookId": "webhook-id-here",
+            "lazySocket": true,
+            "themeName": "prism",
+            "frontendVersion": "v3.2",
+            "showPoweredBy": false,
+            "theme": "prism",
+            "themeColor": "#2563eb"
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

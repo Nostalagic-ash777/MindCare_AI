@@ -1,0 +1,16 @@
+{
+  "botId": "mindcare-ai-bot",
+  "botName": "MindCare AI",
+  "hostUrl": "https://cdn.botpress.cloud/webchat/v3.2",
+  "messagingUrl": "https://messaging.botpress.cloud",
+  "clientId": "mindcare-client-id",
+  "webhookId": "webhook-id-here",
+  "lazySocket": true,
+  "themeName": "prism",
+  "frontendVersion": "v3.2",
+  "showPoweredBy": false,
+  "theme": "prism",
+  "themeColor": "#2563eb",
+  "composerPlaceholder": "Ask me about your mental health...",
+  "botConversationDescription": "MindCare AI - Your Personal Mental Health Assistant"
+}
